@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farahanum Mastura - Comments</title>
+    <link rel="stylesheet" href="styleComment.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOMEPAGE</a></li>
+                <li><a href="Biodata.html">BIODATA</a></li>
+                <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                <li><a href="Videos.html">VIDEO</a></li>
+                <li><a href="Comment.html">COMMENT</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<div class="container">
+    <header class="section-title">
+		<h1>Your <span>Comments</span></h1>
+        <p>Read feedback from viewers and collaborators, and feel free to share your own thoughts and suggestions</p>
+    </header>
+
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="user-info">
+                <img src="https://i.pravatar.cc/150?u=sarah" alt="Dr. Hasnizam">
+                <div class="user-details">
+                    <h4>Dr. Hasnizam</h4>
+                    <span>Lecturer</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="comment-text">An exceptional student with outstanding creativity and technical skills. Always goes above and beyond in projects.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="user-info">
+                <img src="https://i.pravatar.cc/150?u=james" alt="Sharifah Nur Arisya">
+                <div class="user-details">
+                    <h4>Arisya Shafie</h4>
+                    <span>Classmate & Project Partner</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="comment-text">Great collaboration skills and always brings creative ideas to every project. A reliable teammate who consistently delivers quality work on time.</p>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="user-info">
+                <img src="https://i.pravatar.cc/150?u=emily" alt="Amyrah Anuar">
+                <div class="user-details">
+                    <h4>Amyrah Anuar</h4>
+                    <span>Petronas Supervisor</span>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p class="comment-text">Demonstrated excellent responsibility, professionalism, and customer service while handling daily operations. A reliable team member who adapts quickly and performs well under pressure.</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h2>Share Your Experience</h2><br>
+        <form id="commentForm">
+            <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="your.email@example.com" required>
+            </div>
+            
+            <div class="rating-container">
+                <label class="label-bold">Rating</label>
+                <div class="star-rating">
+                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label>Your Comment</label>
+                <textarea rows="4" placeholder="" maxlength="500"></textarea>
+                <div class="char-count">4/500 characters</div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Your Comment</button>
+        </form>
+    </div>
+</div>
+	
+	<footer>
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <div class="footer-logo">Aiierha</div>
+                <p class="company-tagline">
+                    Driven by Creativity, Inspired by Marketing
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href="Biodata.html">Biodata</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="Videos.html">Video</a></li>
+                    <li><a href="Comment.html">Comment</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li><a href="Biodata.html">About Me</a></li>
+                    <li><a href="Biodata.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>CONNECT</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/0193742092" target="_blank">
+					<i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com/Farahanum Mastura Fuzizan"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@justrorror"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:farahanummastura@gmail.com"><i class="fa-solid fa-envelope"></i></a>   
+            </div>
+        </div>
+		</div>
+		
+        <div class="footer-bottom">
+            <p>© 2026 Aiierha. All rights reserved.</p>
+        </div>
+
+    </footer>
+	
+	<script>
+document.getElementById('commentForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevents the page from reloading
+
+    // 1. Get the values from the form inputs
+    const name = this.querySelector('input[type="text"]').value;
+    const comment = this.querySelector('textarea').value;
+    const rating = this.querySelector('input[name="rating"]:checked')?.value || 0;
+    
+    // Create stars string based on rating
+    let starString = "";
+    for(let i=0; i<5; i++) {
+        starString += i < rating ? "★" : "☆";
+    }
+
+    // 2. Create the HTML structure for the new comment
+    const newCard = document.createElement('div');
+    newCard.className = 'testimonial-card';
+    newCard.innerHTML = `
+        <div class="user-info">
+            <img src="https://i.pravatar.cc/150?u=${name}" alt="${name}">
+            <div class="user-details">
+                <h4>${name}</h4>
+                <span>New Contributor</span>
+            </div>
+        </div>
+        <div class="stars" style="color: #ffc107;">${starString}</div>
+        <p class="comment-text">${comment}</p>
+    `;
+
+    // 3. Add the new card to the top of the grid
+    const grid = document.querySelector('.testimonials-grid');
+    grid.prepend(newCard);
+
+    // 4. Reset the form
+    this.reset();
+    alert("Thank you for your comment!");
+});
+</script>
+	
+	</body>
+</html>

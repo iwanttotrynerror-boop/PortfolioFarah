@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR STYLING
+   ========================================================================== */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 15px 0;
+
+}
+
+/* Flexbox container for the list items to center them */
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Change to flex-end to align links to the right */
+    padding-right: 0;
+
+}
+
+/* Individual list item spacing */
+.navbar ul li {
+    margin: 0 25px; 
+}
+
+/* Link typography and the bottom-border transition */
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent; /* Hidden border for smooth animation */
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* Hover state: changes color and reveals the white bottom border */
+.navbar ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff; 
+
+}
+
+/* PORTFOLIO PAGE (Portfolio.html) */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Dark background */
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Header Text */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.section-title p {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filter Menu */
+.filter-menu {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background: #1D1C1C;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    background: #ff0055;
+    border-color: #ff0055;
+}
+
+/* Portfolio Grid (3 Columns) */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #1a1a1a;
+    display: none;
+	flex-direction:column;
+}
+
+.image-box{
+    width:100%;
+    height:280px;    
+    overflow:hidden;
+    border-radius:10px;
+}
+
+.image-box img {
+     width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+}
+
+/* Hover Overlay Effect */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 0, 85, 0.9); /* Pink overlay on hover */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+	pointer-events:none;
+}
+
+.overlay-text {
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.4s ease;
+}
+
+.overlay-text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.overlay-text p {
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover .overlay-text {
+    transform: translateY(0);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Dark overlay */
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Box */
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 2% auto;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+    border: 1px solid #333;
+    overflow-y: auto;
+	max-height: 90vh;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.modal-text {
+    padding: 30px;
+}
+
+.modal-text h2 {
+    margin: 0;
+    color: #ff0055; /* Pink Accent */
+}
+
+.accent-line {
+    width: 50px;
+    height: 3px;
+    background: #ff0055;
+    margin: 15px 0;
+}
+
+.modal-text p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.project-info-tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.section-title h1 span {
+    color: #ff0055; /* Rezume Pink Accent */
+}
+
+/* Make portfolio items look clickable */
+.portfolio-item {
+    cursor: pointer;
+}
+
+.video-btn {
+    display: inline-block;
+    margin-top: 20px;
+	margin-bottom: 30px;
+    padding: 10px 25px;
+    background-color: #ff0055;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: 0.3s;
+}
+
+.video-btn:hover {
+    background-color: white;
+    color: #ff0055;
+}
+
+.show {
+    display: flex!important;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Smooth entry animation for the project boxes */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #171717; /* Dark background */
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+	position: relative; /* Keep background text contained */
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 40px;
+}
+
+.footer-info {
+    flex-basis: 30%;
+}
+
+.company-tagline {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 250px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-links {
+    flex-basis: 15%;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 2.2;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc;
+    position: relative; /* For the background text */
+}
+
+.footer-bottom::before {
+    content: 'AIIERHA';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 160px; /* Adjust size as needed */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.08); /* Very faint white */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.powered-by {
+    z-index: 1; /* Ensure text is above the background graphic */
+}
+
+/* --- Responsive adjustments for Footer --- */
+@media (max-width: 850px) {
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .footer-info {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-bottom::before {
+        font-size: 100px; /* Smaller text on mobile */
+        top: -80px;
+    }
+}
+
+/* Custom size for Connect/Social Icons */
+.footer-links .social-icons {
+    display: flex;
+    gap: 15px;          /* Clean spacing between icons */
+    margin-top: 10px;
+    align-items: center;
+}
+
+.footer-links .social-icons a {
+    font-size: 28px;    /* Larger size for visibility */
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.footer-links .social-icons a:hover {
+    transform: translateY(-3px); /* Lifts icon up slightly on hover */
+    color: #fff;
+}
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+@media (max-width:1200px){
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:992px){
+
+    .portfolio-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .modal-content{
+        width:95%;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar ul{
+        justify-content:center;
+        gap:12px;
+    }
+
+    .navbar ul li a{
+        font-size:.8rem;
+    }
+
+    .portfolio-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h1{
+        font-size:2rem;
+    }
+
+    .section-title p{
+        font-size:.9rem;
+    }
+
+    .filter-menu{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:10px;
+    }
+
+    .filter-btn{
+        padding:10px 16px;
+        font-size:.8rem;
+    }
+
+    .modal-body img{
+        max-height:250px;
+    }
+
+    .modal-text{
+        padding:20px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-links,
+    .footer-info{
+        flex-basis:100%;
+    }
+
+    .footer-links .social-icons{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .container{
+        width:95%;
+        padding:40px 15px;
+    }
+
+    .section-title h1{
+        font-size:1.8rem;
+    }
+
+    .filter-btn{
+        width:100%;
+    }
+
+    .footer-bottom::before{
+        font-size:70px;
+    }
+
+}

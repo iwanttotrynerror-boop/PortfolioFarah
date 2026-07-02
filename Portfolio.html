@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farahanum Mastura - My Portfolio</title>
+    <link rel="stylesheet" href="stylePortfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">HOMEPAGE</a></li>
+                <li><a href="Biodata.html">BIODATA</a></li>
+                <li><a href="Portfolio.html">PORTFOLIO</a></li>
+                <li><a href="Videos.html">VIDEO</a></li>
+                <li><a href="Comment.html">COMMENT</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<section class="portfolio-section">
+        <div class="container">
+            
+            <div class="section-title">
+                <h1>My <span>Portfolio</span></h1>
+                <p>Explore the projects, experiences, and achievements that reflect my passion for marketing, leadership, and continuous growth.</p>
+            </div>
+
+            <div class="filter-menu">
+    <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+    <button class="filter-btn" onclick="filterSelection('pro')">Professional Experience</button>
+    <button class="filter-btn" onclick="filterSelection('academic')">Academic Projects</button>
+    <button class="filter-btn" onclick="filterSelection('achieve')">Achievements</button>
+    <button class="filter-btn" onclick="filterSelection('leader')">Leadership</button>
+	<button class="filter-btn" onclick="filterSelection('media')">Creative Visual & Digital Media</button>
+	<button class="filter-btn" onclick="filterSelection('paper')">Research Paper</button>
+</div>
+
+            <div class="portfolio-grid">
+		     
+  <div class="portfolio-item pro" onclick="openModal('Career Development Poster Design', 
+												'I designed and developed promotional posters for career development campaigns using Canva. These projects focus on clear messaging, structured layouts, and strong visual hierarchy to effectively communicate employability and career awareness content. Through this work, I gained experience in applying design principles to create engaging and professional marketing visuals.',
+												'Skills: Canva, Visual Communication, Typography, Branding, Layout Design, Marketing Collateral', 
+										    	'Image/internposter.jpg',
+												'Video/farahinternvid.mp4')">
+    <div class="image-box">
+        <img src="Image/farahinterntkf.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Internship</h3>
+				<p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+			
+				
+				
+
+                <div class="portfolio-item achieve" onclick="openModal(
+															 'Academic Excellence', 
+															 'I have consistently achieved strong academic performance throughout my Bachelor of Marketing studies at Universiti Utara Malaysia (UUM). I was awarded the Dean’s List recognition for multiple semesters and am currently on track to graduate with First Class Honours, reflecting my dedication, discipline, and commitment to academic excellence.',
+															 'Skills: Academic Excellence, Discipline, Time Management, Consistency', 'Image/farahdean.jpg', 
+															 'Video/MANDARIN3.mov')">
+    <div class="image-box">
+        <img src="Image/farahuumd.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Bachelor of Marketing with Honours</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				
+
+			 
+                <div class="portfolio-item pro" onclick="openModal(
+														 'Customer Experience Associate', 
+														 'I handled daily cashier operations including POS transactions, cash management, and customer service in a fast-paced retail environment.This role focuses on accuracy, efficiency, and delivering a smooth customer experience.', 
+														 'Skills: Cash Handling, POS System, Customer Service, Accuracy, Communication',
+														 'Image/FARAHKEJE.jpg',
+														 'Video/petronas.mp4')">
+    <div class="image-box">
+        <img src="Image/farahpetro.png" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>PETRONAS (Cashier)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				
+
+				
+                <div class="portfolio-item pro" onclick="openModal(
+														 'Café Experience & Beverage Craft Specialist',
+														 'I prepared beverages, managed customer orders, and ensured consistent service quality in a café environment. This experience focuses on product quality, customer satisfaction, and operational efficiency.',
+														 'Skills: Beverage Preparation, Customer Service, Time Management, Teamwork',
+														 'Image/farahcafe.jpg',
+														 'Video/farahcafe.mov')">
+    <div class="image-box">
+        <img src="Image/farahcafeh.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Harmony Café (Barista)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>	
+				  <div class="portfolio-item academic" onclick="openModal(
+														 'Brand Development & Strategy Project',
+														 'Developed a complete brand identity and marketing strategy for an outdoor apparel brand. The project focused on brand positioning, target market identification, and strategic marketing planning to build a strong and competitive brand presence in the market.',
+														 'Skills: Brand Development, Brand Positioning, Marketing Strategy, Consumer Analysis, Creative Branding',
+														 'Image/jacketn.png',
+														 'Video/NorthForm.mp4')">
+    <div class="image-box">
+        <img src="Image/jacket.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>AirForm Outdoor Jacket</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item academic" onclick="openModal(
+														 'Integrated Advertising Campaign',
+														 'Designed and developed an integrated advertising campaign targeting Millennials and Gen Z consumers. The project included creative strategy development, campaign planning, media selection, and promotional execution to enhance brand awareness and engagement.',
+														 'Skills: Advertising Strategy, IMC, Campaign Planning, Media Planning, Consumer Insights',
+														 'Image/Copy of GreenThread Group 2.jpg',
+														 'Video/CLOTH.mp4')">
+    <div class="image-box">
+        <img src="Image/farahuum.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>GreenThread – Sustainable Fashion Brand</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item academic" onclick="openModal(
+														 'Digital Marketing Video Campaign',
+														 'Developed a digital marketing video campaign for CU Mart aimed at attracting and engaging target customers through visual storytelling. The project focused on creating promotional video content to highlight brand offerings, improve customer awareness, and enhance engagement through digital platforms.',
+														 'Skills: Video Marketing, Content Creation, Digital Marketing, Consumer Engagement, Creative Strategy',
+														 'Image/cumart.jpg',
+														 'Video/CUMART.mp4')">
+    <div class="image-box">
+        <img src="Image/video.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>CU Mart</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item academic" onclick="openModal(
+														 'Tourism Video Marketing Campaign',
+														 'Created a digital promotional video for Tasik Beris to attract tourists and increase destination awareness. The project focused on visual storytelling, showcasing natural attractions, and developing engaging content to encourage tourism interest through digital platforms.',
+														 'Skills: Video Production, Tourism Marketing, Digital Content Creation, Storytelling, Audience Engagement',
+														 'Image/tasikberis.jpeg',
+														 'Video/TASIKBERIS.mp4')">
+    <div class="image-box">
+        <img src="Image/canva.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Tasik Beris</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item achieve" onclick="openModal(
+															 'Silat Belt Grading Competition',
+															 'Achieved 2nd Place in an internal Silat belt grading competition conducted during training sessions. The activity was designed to assess technical skills, discipline, and performance under structured evaluation among trainees.This experience strengthened my focus, consistency, physical endurance, and ability to perform under pressure while improving my martial arts techniques.',
+															 'Skills: Discipline, Focus, Physical Endurance, Training Consistency, Competitive Mindset',
+															 'Image/silat2.jpg')">
+    <div class="image-box">
+        <img src="Image/silat.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Silat Olahraga</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+					
+				<div class="portfolio-item achieve" onclick="openModal(
+															 'Petanque Doubles Gold Medalist',
+															 'I actively participated in Petanque as part of my co-curricular involvement, representing discipline, focus, and teamwork in competitive sports. This experience helped me develop strategic thinking, precision, and the ability to perform under pressure while maintaining consistency and concentration.',
+															 'Skills: Teamwork, Focus, Strategic Thinking, Discipline, Performance Under Pressure',
+															 'Image/GROUPPETANQUE.jpg')">
+    <div class="image-box">
+        <img src="Image/boules.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Karnival Sukan Mahasiswa (KASUMA)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item achieve" onclick="openModal(
+															 'First Class Honours',
+															 'I was awarded the Dean’s List recognition for multiple semesters, reflecting outstanding academic achievement and performance. I am also on track to graduate with First Class Honours, showcasing my strong understanding of marketing principles and overall academic consistency.',
+															 'Skills: Academic Excellence, Discipline, Time Management, Analytical Thinking, Consistency',
+															 'Image/farahgrad.jpg')">
+    <div class="image-box">
+        <img src="Image/farahpoli.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Diploma In Marketing</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				
+				
+			
+			  <div class="portfolio-item pro" onclick="openModal(
+													   'Food Production & Kitchen Operations Support',
+													   'I supported both front-of-house service and kitchen operations, including taking customer orders, handling POS transactions, preparing food, and maintaining hygiene standards. This role focuses on delivering efficient service, ensuring product quality, and supporting smooth restaurant operations during peak hours.', 
+													   'Customer Service, Food Preparation, POS System, Hygiene Standards, Teamwork, Time Management, Efficiency',
+													   'Image/FARAHPIZZA.jpg')">
+    <div class="image-box">
+        <img src="Image/farahpizzaw.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Pizza Hut (Service & Kitchen Crew)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+					</div>
+
+				
+				
+			
+				<div class="portfolio-item leadership" onclick="openModal(
+															  'Digital Registration & Event Coordination Specialist',
+															  'I managed participant registration and digital coordination, including creating Google Forms, handling registration data, and setting up QR code systems for attendance and check-in. I also assisted in distributing event information and updates through broadcast communication. This role focused on ensuring efficient registration flow, accurate data management, and smooth digital event operations.',
+															  'Skills: Google Forms, QR Attendance System, Data Management, Digital Coordination, Communication',
+															  'Image/AJKTALK.jpg')">
+    <div class="image-box">
+        <img src="Image/TALKCHAIN.jpeg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>TalkChain: From Source to Success</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				
+				
+			
+				<div class="portfolio-item pro" onclick="openModal(
+														 'F&B Service & Guest Experience Associate',
+														 'I provided customer service by taking orders, handling POS transactions, and ensuring a smooth dining experience. This role focuses on communication, efficiency, and customer engagement.', 
+														 'Skills: Customer Service, POS System, Communication, Teamwork', 
+														 'Image/FARAHSUSHI.jpg')">
+    <div class="image-box">
+        <img src="Image/farahsushiw.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Sushi King (Service Crew)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item leadership" onclick="openModal(
+														 'Health & Safety Operations Committee Member',
+														 'I served as a committee member responsible for ensuring participant health, safety, and overall welfare throughout the program. My role involved monitoring participants during activities, maintaining a safe and organized environment, and ensuring all safety guidelines were followed properly.I worked closely with the committee team to support smooth event flow and respond to participant needs promptly, contributing to a well-managed and successful program execution.', 
+														 'Skills: Participant Welfare, Safety Management, Teamwork, Communication, Event Coordination', 
+														 'Image/AJK3K.jpg')">
+    <div class="image-box">
+        <img src="Image/DXN.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>3K Nutri Health Journey: Industrial Insights & Wellness Tour (DXN Factory, Jitra)</h3>
+                <p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item media" onclick="openModal('Marketing & SWOT Analysis Poster', 
+												'Developed a minimalist academic marketing poster analysing Grab as a super app, focusing on service issues, customer behaviour, and SWOT analysis. The design presents key marketing insights using structured visual communication and data-driven interpretation.',
+												'Skills: Market Analysis, SWOT Analysis, Visual Communication, Canva Design, Strategic Thinking, Consumer Insight', 
+										    	'Image/grabposter.jpg',
+												'Video/ROCK.mp4')">
+    <div class="image-box">
+        <img src="Image/grab.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Grab Super App </h3>
+				<p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				
+				<div class="portfolio-item media" onclick="openModal('Growth & Recommendations Poster', 
+												'Developed a marketing poster presenting analysis on 99 Speedmart’s business growth with strategic recommendations for improvement. The design focused on clear visual communication of key insights and strategic suggestions.',
+												'Skills: Market Analysis, Visual Design, Canva, Strategic Thinking, Data Presentation', 
+										    	'Image/ASSIGNMENT2.png')">
+    <div class="image-box">
+        <img src="Image/SPEEDMART.png" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>Retail Growth Analysis & Strategic Recommendations (99 Speedmart) </h3>
+				<p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+				<div class="portfolio-item paper" onclick="openModal('Factors Influencing UUM Students’ Intention to Use Buy Now Pay Later (BNPL)', 
+												'Conducted quantitative research to examine the factors influencing UUM students’ intention to use Buy Now Pay Later (BNPL) services. The study involved questionnaire design, data collection, and statistical analysis using SPSS to identify key determinants affecting consumer adoption behaviour.',
+												'Skills: Marketing Research, SPSS, Quantitative Analysis, Questionnaire Design, Consumer Behaviour, Data Interpretation', 
+										    	'Image/pdf.png',
+												'PDF/report.pdf',
+												'View PDF')">
+    <div class="image-box">
+        <img src="Image/bnpl.jpg" alt="Project">
+        <div class="overlay">
+            <div class="overlay-text">
+				<h3>BNPL Consumer Behaviour Study</h3>
+				<p><b>View Details</b></p>
+                <p>Click to see info</p>
+            </div>
+        </div>
+    </div>
+</div>
+						
+
+            </div>
+  
+    </section>
+	
+	<div id="portfolioModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div class="modal-body">
+            <img id="modalImg" src="1" alt="Project Detail Image">
+            <div class="modal-text">
+                <h2 id="modalTitle">Title</h2>
+                <div class="accent-line"></div>
+                <p id="modalDesc">Description</p>
+				<div class="accent-line"></div>
+				<p id="modalSkill">Skill</p>
+				
+				<a id="modalVideoLink" href="#" class="video-btn">Watch Video</a>
+            </div>
+        </div>
+    </div>
+</div>
+	
+		<footer>
+        <div class="footer-container">
+            
+            <div class="footer-info">
+                <div class="footer-logo">Aiierha</div>
+                <p class="company-tagline">
+                    Driven by Creativity, Inspired by Marketing
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h4>NAVIGATION</h4>
+                <ul>
+                    <li><a href="Biodata.html">Biodata</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                    <li><a href="Videos.html">Video</a></li>
+                    <li><a href="Comment.html">Comment</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>ABOUT</h4>
+                <ul>
+                    <li><a href="Biodata.html">About Me</a></li>
+                    <li><a href="Biodata.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>CONNECT</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/0193742092" target="_blank">
+					<i class="fab fa-whatsapp"></i></a>
+                    <a href="https://facebook.com/Farahanum Mastura Fuzizan"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@justrorror"><i class="fab fa-tiktok"></i></a>
+                    <a href="mailto:farahanummastura@gmail.com"><i class="fa-solid fa-envelope"></i></a>   
+            </div>
+        </div>
+		</div>
+		
+        <div class="footer-bottom">
+            <p>© 2026 Aiierha. All rights reserved.</p>
+        </div>
+
+    </footer>
+	
+<script>
+    function filterSelection(category) {
+        // Get all portfolio items and filter buttons
+        var items = document.getElementsByClassName("portfolio-item");
+        var buttons = document.getElementsByClassName("filter-btn");
+
+        // 1. Handle Button Active State
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+            // Check if this button was the one clicked
+            if (event && event.currentTarget === buttons[i]) {
+                buttons[i].classList.add("active");
+            }
+        }
+
+        // 2. Filter Items Logic
+        if (category === "all") category = ""; 
+
+        for (var i = 0; i < items.length; i++) {
+            // Remove the 'show' class first to reset
+            items[i].classList.remove("show");
+            
+            // Check if the item contains the specific category class
+            if (items[i].className.indexOf(category) > -1) {
+                items[i].classList.add("show");
+            }
+        }
+    }
+
+    // Modal logic (remains mostly the same but kept here for completeness)
+    function openModal(title, description, skill, imgSrc, fileUrl, buttonText = "Watch Video")
+	{
+		console.log(title);
+		
+        document.getElementById("portfolioModal").style.display = "block";
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDesc").innerText = description;
+        document.getElementById("modalSkill").innerText = skill;
+        
+        const imgElement = document.getElementById("modalImg");
+        if(imgElement) {
+            imgElement.src = imgSrc; 
+        }
+    
+        const videoBtn = document.getElementById("modalVideoLink");
+
+		// Hide button if no file
+		if (!fileUrl || fileUrl.trim() === "") {
+    	videoBtn.style.display = "none";
+    	return;
+}
+
+		// Show button
+		videoBtn.style.display = "inline-block";
+
+		// PDF
+		if (buttonText === "View PDF") {
+    	videoBtn.textContent = "View PDF";
+    	videoBtn.href = fileUrl;
+    	videoBtn.target = "_blank";
+}
+
+		// Video
+		else {
+    	videoBtn.textContent = "Watch Video";
+    	videoBtn.href = "Videos.html?play=" + encodeURIComponent(fileUrl);
+    	videoBtn.target = "_self";
+}
+    }
+
+    function closeModal() {
+        document.getElementById("portfolioModal").style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        let modal = document.getElementById("portfolioModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Initialize the filter to show 'all' when page loads
+    window.onload = function() {
+        filterSelection('all');
+    };
+</script>
+	
+	</body>
+</html>

@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR STYLING
+   ========================================================================== */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 15px 0;
+
+}
+
+/* Flexbox container for the list items to center them */
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Change to flex-end to align links to the right */
+    padding-right: 0;
+
+}
+
+/* Individual list item spacing */
+.navbar ul li {
+    margin: 0 25px; 
+}
+
+/* Link typography and the bottom-border transition */
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent; /* Hidden border for smooth animation */
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* Hover state: changes color and reveals the white bottom border */
+.navbar ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff; 
+
+}
+
+/* VIDEO PAGE (Videos.html) */
+:root {
+    bg-color: #333; 
+    card-bg: #fff;
+    accent-color: #007bff; 
+    text-main: #ffffff;
+    text-dim: #a9a9b0;
+	shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+	font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(bg-color);
+    color: var(text-main);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Header Text */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+	font-family: 'Poppins', sans-serif;
+}
+
+
+.section-title p {
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+	font-family: 'Poppins', sans-serif;
+}
+
+.section-title h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+	font-family: 'Poppins', sans-serif;
+}
+
+.section-title h1 span {
+    color: #ff0055; /* Rezume Pink Accent */
+	font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* --- Header Section --- */
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -1px;
+}
+
+.header p {
+    color: var(text-dim);
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* --- Video Grid --- */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.video-card {
+    background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.01);
+	cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Thumbnail Area */
+.thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.thumbnail-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Play Button Overlay */
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.3); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-icon {
+    font-size: 50px;
+    color: 50px; color: #fff;
+}
+
+/* Duration Tag */
+.duration {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Text Content */
+.video-info {
+    padding: 25px;
+}
+
+.video-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.25rem;
+    color: var(text-main);
+}
+
+.video-info p {
+    margin: 0;
+    color: var(text-dim);
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header h1 { font-size: 2.2rem; }
+}
+
+/* --- ENHANCED MODAL FOR BIG VIDEO --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Slightly darker background */
+    align-items: center;
+    justify-content: center;
+    padding: 20px; 
+}
+
+.modal-content {
+    position: relative;
+    width: 95%;          /* Increased from 80% to 95% */
+    max-width: 1400px;   /* Increased to allow very large displays */
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content video {
+    width: 100%;
+    height: auto;
+    max-height: 85vh;    /* Prevents the video from being taller than the screen */
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(255, 255, 255, 0.1); /* Adds a subtle frame */
+}
+
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: #fff;
+    font-size: 50px;     /* Made bigger for easier exit */
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1002;
+    transition: 0.3s;
+}
+
+.close-modal:hover {
+    color: var(accent-color);
+    transform: scale(1.1);
+}
+
+/* Add a simple fade-in animation */
+@keyframes videoZoom {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.modal-content {
+    animation: videoZoom 0.4s ease-out;
+}
+
+#mainVideo {
+    width: 100%;
+    max-height: 80vh;
+    aspect-ratio: 16 / 9; /* This forces it to stay in video shape */
+    background: #000;
+    border-radius: 8px;
+	outline: none;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #171717; /* Dark background */
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+	position: relative; /* Keep background text contained */
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 40px;
+}
+
+.footer-info {
+    flex-basis: 30%;
+}
+
+.company-tagline {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 250px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-links {
+    flex-basis: 15%;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 2.2;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc;
+    position: relative; /* For the background text */
+}
+
+.footer-bottom::before {
+    content: 'AIIERHA';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 160px; /* Adjust size as needed */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.08); /* Very faint white */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.powered-by {
+    z-index: 1; /* Ensure text is above the background graphic */
+}
+
+/* --- Responsive adjustments for Footer --- */
+@media (max-width: 850px) {
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .footer-info {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-bottom::before {
+        font-size: 100px; /* Smaller text on mobile */
+        top: -80px;
+    }
+}
+
+/* Custom size for Connect/Social Icons */
+.footer-links .social-icons {
+    display: flex;
+    gap: 15px;          /* Clean spacing between icons */
+    margin-top: 10px;
+    align-items: center;
+}
+
+.footer-links .social-icons a {
+    font-size: 28px;    /* Larger size for visibility */
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.footer-links .social-icons a:hover {
+    transform: translateY(-3px); /* Lifts icon up slightly on hover */
+    color: #fff;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width:1200px){
+
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:992px){
+
+    .video-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .modal-content{
+        width:95%;
+    }
+
+    #mainVideo{
+        max-height:70vh;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .navbar ul{
+        justify-content:center;
+        gap:12px;
+    }
+
+    .navbar ul li a{
+        font-size:.8rem;
+    }
+
+    .section-title h1{
+        font-size:2rem;
+    }
+
+    .section-title p{
+        font-size:.9rem;
+    }
+
+    .video-grid{
+        grid-template-columns:1fr;
+    }
+
+    .video-info{
+        padding:20px;
+    }
+
+    .video-info h3{
+        font-size:1.1rem;
+    }
+
+    .video-info p{
+        font-size:.9rem;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-info,
+    .footer-links{
+        flex-basis:100%;
+    }
+
+    .footer-links .social-icons{
+        justify-content:center;
+    }
+
+    .close-modal{
+        top:15px;
+        right:20px;
+        font-size:40px;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .container{
+        width:95%;
+        padding:40px 15px;
+    }
+
+    .section-title h1{
+        font-size:1.8rem;
+    }
+
+    .header{
+        margin-bottom:40px;
+    }
+
+    #mainVideo{
+        max-height:60vh;
+    }
+
+    .footer-bottom::before{
+        font-size:70px;
+    }
+
+}

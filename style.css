@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background-color: #333;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR STYLING
+   ========================================================================== */
+
+/* Main container that holds the nav and stays at the top of the screen */
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 15px 0;
+
+}
+
+/* Flexbox container for the list items to center them */
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Change to flex-end to align links to the right */
+    padding-right: 0;
+
+}
+
+/* Individual list item spacing */
+.navbar ul li {
+    margin: 0 25px; 
+}
+
+/* Link typography and the bottom-border transition */
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent; /* Hidden border for smooth animation */
+    padding-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+
+}
+
+/* Hover state: changes color and reveals the white bottom border */
+.navbar ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff; 
+
+}
+
+
+/* ==========================================================================
+   HERO SECTION (INDEX PAGE)
+   ========================================================================== */
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* We use background-color here; the image is in the ::before pseudo-element 
+       so the grayscale doesn't affect the text. */
+    background-color: #000; 
+}
+
+/* Background image with grayscale filter applied only to the image */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('Image/mainFarah.jpg') center center no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    z-index: 0;
+}
+
+.hero-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0; 
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.hero-content {
+    z-index: 1; /* Keeps text above the video/image background */
+    position: relative; 
+}
+
+.greeting {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* ==========================================================================
+   HERO BUTTONS
+   ========================================================================== */
+
+.hero-buttons {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.primary-btn {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.primary-btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #ccc;
+    border: 2px solid #ccc;
+}
+
+.secondary-btn:hover {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #171717; /* Dark background */
+    color: #fff;
+    padding: 50px 50px 20px 50px;
+	position: relative; /* Keep background text contained */
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    padding-bottom: 40px;
+}
+
+.footer-info {
+    flex-basis: 30%;
+}
+
+.company-tagline {
+    font-size: 15px;
+    color: #ccc;
+    line-height: 1.6;
+    margin-top: 10px;
+    max-width: 250px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.footer-links {
+    flex-basis: 15%;
+}
+
+.footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 2.2;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #ccc;
+    position: relative; /* For the background text */
+}
+
+.footer-bottom::before {
+    content: 'AIIERHA';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 160px; /* Adjust size as needed */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.08); /* Very faint white */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.powered-by {
+    z-index: 1; /* Ensure text is above the background graphic */
+}
+
+/* --- Responsive adjustments for Footer --- */
+@media (max-width: 850px) {
+    .footer-container {
+        flex-wrap: wrap;
+    }
+    .footer-info {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+    }
+    .footer-links {
+        flex-basis: 50%;
+        margin-bottom: 30px;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-bottom::before {
+        font-size: 100px; /* Smaller text on mobile */
+        top: -80px;
+    }
+}
+
+/* Custom size for Connect/Social Icons */
+.footer-links .social-icons {
+    display: flex;
+    gap: 15px;          /* Clean spacing between icons */
+    margin-top: 10px;
+    align-items: center;
+}
+
+.footer-links .social-icons a {
+    font-size: 28px;    /* Larger size for visibility */
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.footer-links .social-icons a:hover {
+    transform: translateY(-3px); /* Lifts icon up slightly on hover */
+    color: #fff;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media (max-width:1200px){
+
+    .hero-content{
+        max-width:800px;
+    }
+
+}
+
+@media (max-width:992px){
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .footer-container{
+        gap:30px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .main-header{
+        padding:10px 0;
+    }
+
+    .navbar ul{
+        justify-content:center;
+        gap:12px;
+    }
+
+    .navbar ul li a{
+        font-size:.8rem;
+    }
+
+    .greeting{
+        font-size:1.4rem;
+    }
+
+    .name{
+        font-size:2.7rem;
+    }
+
+    .subtitle{
+        font-size:.9rem;
+    }
+
+    .btn{
+        width:100%;
+        max-width:300px;
+    }
+
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .footer-links,
+    .footer-info{
+        flex-basis:100%;
+    }
+
+    .social-icons{
+        justify-content:center;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero-section{
+        padding:120px 20px 60px;
+    }
+
+    .name{
+        font-size:2rem;
+    }
+
+    .subtitle{
+        line-height:1.6;
+    }
+
+    .footer-bottom::before{
+        font-size:70px;
+    }
+
+}
